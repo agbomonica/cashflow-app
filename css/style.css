@@ -1,0 +1,501 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+:root {
+    --primary-color: #047aed;
+    --secondary-color: #1c3fa8;
+    --dark-color: #002240;
+    --light-color: #f4f4f4;
+    --success-color: #5cb85c;
+    --error-color: #d9534f;
+
+
+}
+
+/* Base styles */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Lato', 'sans-serif';
+    color: #333;
+    line-height: 1.6;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+
+}
+
+h1,
+h2 {
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+
+p {
+    margin: 10px 0;
+}
+
+img {
+    width: 100%;
+}
+
+code,
+pre {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+.hidden {
+    visibility: hidden;
+    height: 0;
+}
+
+/*Navbar*/
+.navbar {
+    background-color: var(--primary-color);
+    color: #fff;
+    height: 70px;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar a {
+    color: #fff;
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.navbar a:hover {
+    border-bottom: 2px #fff solid;
+}
+
+.navbar .flex {
+    justify-content: space-between;
+}
+
+/*Showcase*/
+.showcase {
+    height: 400px;
+    background-color: var(--primary-color);
+    color: #fff;
+    position: relative;
+}
+
+.showcase h1 {
+    font-size: 40px;
+}
+
+.showcase p {
+    margin: 20px 0;
+}
+
+.showcase .grid {
+    /*overflow removes the scroll bar*/
+    overflow: visible;
+    grid-template-columns: 55% 45%;
+    gap: 30px;
+}
+
+.showcase-text {
+    animation: slideInFromLeft 1s ease-in;
+    
+}
+
+.showcase-form {
+    position: relative;
+    top: 60px;
+    height: 350px;
+    width: 400px;
+    padding: 40px;
+    /* z-index makes the card always in the front*/
+    z-index: 100;
+    animation: slideInFromRight 1s ease-in;
+
+}
+
+.showcase-form .form-control {
+    margin: 30px 0;
+}
+
+.showcase-form input[type='text'],
+.showcase-form input[type='email'] {
+    border: 0;
+    border-bottom: 1px solid #b4becb;
+    /* width ensure the border line stretch to the end */
+    width: 100%;
+    padding: 3px;
+    font-size: 14px;
+}
+
+.showcase-form input:focus {
+    outline: none;
+}
+
+/*pseudo selectors must have a content property, position absolute inside a relative (showcase) */
+.showcase::before,
+.showcase::after {
+    content: '';
+    position: absolute;
+    height: 100px;
+    bottom: -70px;
+    right: 0;
+    left: 0;
+    background: #fff;
+    /*chrome & safai */
+    --webkit-transforrm: skewY(-3deg);
+    --moz-transform: skewY(-3deg);
+    --ms-transform: skewY(-3deg);
+}
+
+.stats {
+    padding-top: 100px;
+    animation: slideInFromBottom 1s ease-in;
+
+}
+
+.stats-heading {
+    max-width: 500px;
+    margin: auto;
+}
+
+/* grid is targeted because stats has 2 h3 elements*/
+.stats .grid h3 {
+    font-size: 35px;
+}
+
+.stats .grid p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Cloud*/
+.cloud .grid {
+    grid-template-columns: 4fr 3fr;
+}
+
+/* Languages */
+.languages .flex {
+    /*card responsiveness*/
+    flex-wrap: wrap;
+
+}
+
+.languages .card {
+    text-align: center;
+    margin: 18px 10px 40px;
+    transition: transform 0.2s ease-in;
+}
+
+.languages .card h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.languages .card:hover {
+    /* -ve moves up, +ve down*/
+    transform: translateY(-15px);
+}
+
+/* Features */
+.features-head .grid *:first-child {
+    grid-column: 1 / span 2;
+}
+
+.features-head h1 {
+    text-align: center;
+    margin-top: 100px;
+
+}
+
+.features-head img {
+    width: 200px;
+    justify-self: flex-end;
+}
+
+.features-sub-head img {
+    width: 300px;
+    justify-self: flex-end;
+}
+
+.features-main .card>i {
+    margin-right: 20px;
+}
+
+.features-main .grid {
+    padding: 30px;
+}
+
+.features-main .grid>* {
+    grid-column: 1 / span 3;
+}
+
+.features-main h3, 
+h4 {
+    margin: 20px 0;
+}
+
+.features-text a {
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.alert i {
+    margin-right: 10px;
+}
+
+/*Contact*/
+.contact-main .flex {
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    margin-top: 26px;
+    width: 100%;
+}
+
+.contact-form {
+    position: relative;
+    background-color: var(--light-color);
+    /* add width so bg color fit the width of div */
+    width: calc(100% - 400px);
+    padding: 60px 40px 20px;
+}
+
+.contact-form form {
+    width: 100%;
+}
+
+.contact-form .row {
+    width: 100%;
+    display: flex;
+}
+
+.contact-form .input50 {
+    width: 50%;
+    margin: 0 10px;
+}
+
+.contact-form .input100 {
+    width: 100%;
+    margin: 0 10px;
+}
+
+.contact-form .row input,
+.contact-form .row textarea {
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: #111;
+    background: transparent;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    font-size: 13px;
+    font-weight: 300px;
+    margin: 10px 0;
+    /*prevent textarea resize*/
+    resize: none;
+}
+
+.contact-form .row textarea {
+    height: 150px;
+}
+
+.contact-form .row input[type="submit"] {
+    /*background-color: #1b206e;*/
+    background-color: var(--secondary-color);
+
+    color: #fff;
+    /*This margin pushes the send button up a bit*/
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 300px;
+    border: 0;
+    cursor: pointer;
+}
+
+.contact-info {
+    width: 350px;
+    background: var(--light-color);
+    /* padding: top, left&right, bottom */
+    padding: 60px 40px 20px;
+}
+
+.contact-info .info-box {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.contact-info .info-box .contact-icon {
+    width: 20px;
+    margin-right: 40px;
+}
+
+.contact-info .info-box .details {
+    color: var(--secondary-color);
+}
+
+.contact-info .info-box .details p,
+.contact-info .info-box .details a {
+    color: #111;
+}
+
+/* Footer */
+.footer .social a {
+    margin: 0 10px;
+}
+
+/* Animation */
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+
+}
+
+/* Tablets & under variants */
+@media (max-width: 768px) {
+
+    .grid,
+    .showcase .grid,
+    .stats .grid,
+    .cloud .grid,
+    .features-main .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .showcase {
+        height: auto;
+    }
+
+    .showcase-text {
+        text-align: center;
+        margin-top: 40px;
+        animation: slideInFromTop 1s ease-in;
+
+    }
+
+    .showcase-form {
+        justify-self: center;
+        margin: auto;
+        animation: slideInFromBottom 1s ease-in;
+
+    }
+
+    .features-head h1 {
+        text-align: center;
+        margin-top: 40px;
+
+    }
+
+    .features-head,
+    .features-sub-head,
+    .contact-head {
+        text-align: center;
+    }
+
+    .features-head img,
+    .features-sub-head img {
+        justify-self: center;
+    }
+
+    .features-main .grid>* {
+        grid-column: 1;
+    }
+
+    .contact-main .flex {
+        flex-direction: column;
+    }
+
+    .contact-form {
+        width: 100%;
+        padding: 30px 30px 20px;
+    }
+
+    .contact-form .row {
+        flex-direction: column;
+    }
+
+    .contact-form .input50 {
+        width: 100%;
+        margin: 0;
+    }
+
+    .contact-form .input100 {
+        width: 100%;
+        margin: 0;
+    }
+
+    .contact-info {
+        width: 100%;
+        margin-top: 20px;
+        padding: 30px 30px 20px;
+
+
+    }
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+
+    .navbar {
+        height: 110px;
+    }
+
+    .navbar .flex {
+        flex-direction: column;
+    }
+
+    .navbar ul {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+}
