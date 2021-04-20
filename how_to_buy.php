@@ -12,11 +12,12 @@
 </head>
 
 <body>
-    <!-- Nav bar-->
+    <!-- Navbar-->
     <div class="navbar">
-        <div class="container flex">
+        <div class="container">
             <h1 class="logo">CASHFLOW.</h1>
-            <nav>
+            <div class="toggle"></div>
+            <nav class="nav">
                 <ul>
                     <li><a href="index.php">Home</a></li>
                     <li><a href="how_to_buy.php">How to Buy</a></li>
@@ -26,6 +27,7 @@
             </nav>
         </div>
     </div>
+    
 <!-- Sub-head -->
     <section class="features-sub-head bg-light py-3">
         <div class="container grid">
@@ -101,6 +103,7 @@
             </div>
         </div>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

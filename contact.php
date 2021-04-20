@@ -14,19 +14,20 @@
 <body>
     <!-- Nav bar-->
     <div class="navbar">
-        <div class="container flex">
+        <div class="container">
             <h1 class="logo">CASHFLOW.</h1>
-            <nav>
+            <div class="toggle"></div>
+            <div class="nav">
                 <ul>
                     <li><a href="index.php">Home</a></li>
                     <li><a href="how_to_buy.php">How to Buy</a></li>
                     <li><a href="about.php">About</a></li>
                     <li><a href="contact.php">Contact</a></li>
                 </ul>
-            </nav>
+            </div>
         </div>
     </div>
-
+    
     <!-- Contact Head -->
     <section class="contact-head py-3">
         <div class="container">
@@ -103,7 +104,7 @@
                         <img src="images/call.png" class="contact-icon" alt="call">
                         <div class="details">
                             <h4>Call</h4>
-                            <a href="tel:+2348050722709">+234 805 072 2709</a>
+                            <a href="tel:+2348050722709">+234 805 072 2709<br/></a>
                             <a href="tel:+2348050722709">+234 805 072 2709</a>
                         </div>
                     </div>
@@ -133,6 +134,8 @@
             </div>
         </div>
     </footer>
+    <script src="js/script.js"></script>
+
 </body>
 
 </html>

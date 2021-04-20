@@ -49,42 +49,89 @@ img {
     width: 100%;
 }
 
-code,
-pre {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-}
-
 .hidden {
     visibility: hidden;
     height: 0;
 }
 
-/*Navbar*/
+/* Navbar */
 .navbar {
     background-color: var(--primary-color);
     color: #fff;
-    height: 70px;
+    height: 80px;
 }
 
-.navbar ul {
+.nav {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+    z-index: 15;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.navbar a {
+.nav.active {
+    left: 0;
+}
+
+.nav ul {
+    position: relative;
+}
+
+.nav li {
+    position: relative;
+    text-align: center;
+}
+
+.nav ul li a {
+    font-size: 2.2rem;
     color: #fff;
-    padding: 10px;
-    margin: 0 5px;
+    font-weight: 300;
+
 }
 
-.navbar a:hover {
-    border-bottom: 2px #fff solid;
+.nav ul li a:hover {
+    color: var(--light-color);
 }
 
-.navbar .flex {
-    justify-content: space-between;
+
+/*Toggle*/
+.toggle {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    /* The .. means up one level, out of the css folder, to images folder */
+    background: var(--primary-color) url(../images/menu.png);
+    background-position: center;
+    background-size: 30px;
+    background-repeat: no-repeat;
+    z-index: 20;
+    cursor: pointer;
 }
+
+.toggle.active {
+    background: var(--primary-color) url(../images/close.png);
+    background-position: center;
+    background-size: 25px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.logo {
+    position: absolute;
+    top: 10px;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #fff;
+    z-index: 20;
+}
+
 
 /*Showcase*/
 .showcase {
@@ -111,7 +158,7 @@ pre {
 
 .showcase-text {
     animation: slideInFromLeft 1s ease-in;
-    
+
 }
 
 .showcase-form {
@@ -242,7 +289,7 @@ pre {
     grid-column: 1 / span 3;
 }
 
-.features-main h3, 
+.features-main h3,
 h4 {
     margin: 20px 0;
 }
@@ -344,14 +391,10 @@ h4 {
     margin-right: 40px;
 }
 
-.contact-info .info-box .details {
+.contact-info .info-box .details h4 {
     color: var(--secondary-color);
 }
 
-.contact-info .info-box .details p,
-.contact-info .info-box .details a {
-    color: #111;
-}
 
 /* Footer */
 .footer .social a {
@@ -478,13 +521,34 @@ h4 {
         width: 100%;
         margin-top: 20px;
         padding: 30px 30px 20px;
+    }
 
+    .contact-info .info-box {
+        flex-wrap: wrap;
+    }
+
+
+    .logo {
+        font-size: 1.2rem;
+        top: 10px;
+        left: 7px;
+    }
+
+    .nav ul li a {
+        font-size: 1.5rem;
+    }
+
+    .features-head h1 {
+        font-size: 40px;
+        margin-top: 10px;
+        font-weight: 300;
 
     }
-}
 
-/* Mobile */
-@media (max-width: 500px) {
+    /* Mobile */
+    @media (max-width: 500px) {}
+
+    /* @media (max-width: 500px) {
 
     .navbar {
         height: 110px;
@@ -495,7 +559,8 @@ h4 {
     }
 
     .navbar ul {
+        padding: 10px;
         background-color: rgba(0, 0, 0, 0.1);
     }
 
-}
+} */

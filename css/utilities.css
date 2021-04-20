@@ -137,9 +137,7 @@
 
 .flex {
     display: flex;
-    /*flex-direction: column;*/
     justify-content: center;
-    /*use to access the vertical colum i.e push website-name down*/
     align-items: center;
     height: 100%;
 }

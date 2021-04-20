@@ -18,16 +18,17 @@
 <body>
     <!-- Nav bar-->
     <div class="navbar">
-        <div class="container flex">
+        <div class="container">
             <h1 class="logo">CASHFLOW.</h1>
-            <nav>
+            <div class="toggle"></div>
+            <div class="nav">
                 <ul>
                     <li><a href="index.php">Home</a></li>
                     <li><a href="how_to_buy.php">How to Buy</a></li>
                     <li><a href="about.php">About</a></li>
                     <li><a href="contact.php">Contact</a></li>
                 </ul>
-            </nav>
+            </div>
         </div>
     </div>
 
@@ -41,10 +42,10 @@
                 </p>
                 <a href="#" id="-token-target" data-custom-value="xYWuMRsTdiZlhiSvBnO" class="btn btn-outline" onclick = "displayToken()"> Token Address</a>
             </div>
-                <div class="showcase-form card">
+                <!-- <div class="showcase-form card">
                     <h2>Send us a Message</h2>
                     
-                </div>
+                </div> -->
         </div>
     </section>
 
@@ -137,12 +138,6 @@
             </div>
         </div>
     </footer>
-    <script>
-        $("#target-token").click(function() {
-        var value = $(this).data("custom-value");
-    // do other stuff.
-});
-    </script>
+    <script src="js/script.js"></script>
 </body>
-
 </html>
