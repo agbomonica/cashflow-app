@@ -456,12 +456,12 @@ h4 {
     }
 
     .showcase {
-        height: auto;
+        height: 400px;
     }
 
     .showcase-text {
         text-align: center;
-        margin-top: 40px;
+        margin-top: 10px;
         animation: slideInFromTop 1s ease-in;
 
     }
