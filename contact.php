@@ -1,3 +1,36 @@
+<?php
+    include('config/connection.php');
+    global $msg;
+    global $error;
+
+    if(isset($_POST['submit'])){
+        $fname = $_POST['fname'];
+        $lname = $_POST['lname'];
+        $email = $_POST['email'];
+        $subject = $_POST['subject'];
+        $message = $_POST['message'];
+
+    $sql = "INSERT INTO contact (fname, lname, email, subject, message) VALUES(:fname, :lname, :email, :subject, :message)";
+    $query = $dbh->prepare($sql);
+    $query->bindParam(':fname',$fname,PDO::PARAM_STR);
+    $query->bindParam(':lname',$lname,PDO::PARAM_STR);
+    $query->bindParam(':email',$email,PDO::PARAM_STR);
+    $query->bindParam(':subject',$subject,PDO::PARAM_STR);
+    $query->bindParam(':message',$message,PDO::PARAM_STR);
+
+    $query->execute();
+
+    if ($query){
+        $msg = "Message sent successfully";
+    }else{
+    $error = "Error in sending message";
+
+    }
+
+    }
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +48,7 @@
     <!-- Nav bar-->
     <div class="navbar">
         <div class="container">
-            <h1 class="logo">CASHFLOW.</h1>
+            <h1 class="logo">CASHFLOW QUADRANT.</h1>
             <div class="toggle"></div>
             <div class="nav">
                 <ul>
@@ -37,6 +70,19 @@
                     Send us a message today. We will like to hear from you..
                 </p>
             </div>
+            <?php if($msg){?>
+                
+            <div class="alert alert-success">
+                    <p><?php echo $msg ?></p>
+
+                    <?php 
+                        }else if ($error){ ?>
+                <div class="alert alert-error">
+
+                    <?php  }
+
+                    ?>
+            </div>
         </div>
     </section>
         
@@ -44,32 +90,29 @@
     <section class="contact-main my-2">
         <div class="container flex">
             <div class="contact-form">
-                <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+                <form name="contact" method="POST">
                     <input type="hidden" name="form-name" value="contact">
-                    <p class="hidden">
-                        <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
-                    </p>
                             <div class="row">
                                 <div class="input50">
-                                    <input type="text" name="fname" id="fname" placeholder="First Name">
+                                    <input type="text" name="fname" id="fname" placeholder="First Name" required>
                                 </div>
                                 <div class="input50">
-                                    <input type="text" name="lname" id="lname" placeholder="Last Name">
+                                    <input type="text" name="lname" id="lname" placeholder="Last Name" required>
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="input50">
-                                    <input type="text" name="email" id="email" placeholder="Email">
+                                    <input type="text" name="email" id="email" placeholder="Email" required>
                                 </div>
                                 <div class="input50">
-                                    <input type="text" name="subject" id="subject" placeholder="Subject">
+                                    <input type="text" name="subject" id="subject" placeholder="Subject" required>
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="input100">
-                                    <textarea name="message" id="message" placeholder="Message"></textarea>
+                                    <textarea name="message" id="message" placeholder="Message" required></textarea>
                                 </div>
                             </div>
                             <div class="row">
@@ -81,33 +124,20 @@
             </div>
 
             <div class="contact-info">
-                    <div class="info-box">
-                        <img src="images/address.png" class="contact-icon" alt="contact address">
-                        <div class="details">
-                            <h4>Address</h4>
-                            <p>5, Mohammed Bello Str. Sango Ota. Ogun State</p>
-                        </div>
-                    </div>
+                    
 
                     <div class="info-box">
                         <img src="images/email.png" class="contact-icon" alt="contact email">
                         <div class="details">
                             <h4>Email</h4>
-                            <a href="mailto:agbomonica.am@gmail.com">cashflow.token@gmail.com</a>
+                            <a href="mailto:agbomonica.am@gmail.com">cashflowQuadrant@gmail.com</a>
 
-                            <a href="mailto:agbomonica.am@gmail.com">cashflow.token@yahoo.com</a>
+                            <a href="mailto:agbomonica.am@gmail.com">cashflowQuadrant@yahoo.com</a>
 
                         </div>
                     </div>
 
-                    <div class="info-box">
-                        <img src="images/call.png" class="contact-icon" alt="call">
-                        <div class="details">
-                            <h4>Call</h4>
-                            <a href="tel:+2348050722709">+234 805 072 2709<br/></a>
-                            <a href="tel:+2348050722709">+234 805 072 2709</a>
-                        </div>
-                    </div>
+                    
             </div>
 
         </div>
@@ -129,8 +159,7 @@
             </nav>
             <div class="social">
                 <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
-                <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
-                <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="https://t.me/CFQBSC"><i class="fab fa-telegram fa-2x"></i></a>
             </div>
         </div>
     </footer>

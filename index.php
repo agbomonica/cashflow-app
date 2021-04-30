@@ -19,7 +19,7 @@
     <!-- Nav bar-->
     <div class="navbar">
         <div class="container">
-            <h1 class="logo">CASHFLOW.</h1>
+            <h1 class="logo">CASHFLOW QUADRANT.</h1>
             <div class="toggle"></div>
             <div class="nav">
                 <ul>
@@ -40,12 +40,13 @@
                 <p>A platform dedicated to giving back to the community 
                     & reaching those in need of support. 
                 </p>
-                <a href="#" id="-token-target" data-custom-value="xYWuMRsTdiZlhiSvBnO" class="btn btn-outline" onclick = "displayToken()"> Token Address</a>
+                <a href="index.php" 
+                            id="token-address" 
+                            class="btn btn-outline"> Token Address
+                </a>
+
             </div>
-                <!-- <div class="showcase-form card">
-                    <h2>Send us a Message</h2>
-                    
-                </div> -->
+                
         </div>
     </section>
 
@@ -55,6 +56,13 @@
             <h3 class="stats-heading text-center my-1">
                 You donate, we give
             </h3>
+
+            <!-- <div class="stats-logo my-4">
+                <marquee behavior="" direction="">            
+                <img src="images/cashflow.jpg" alt="cashflow quadrant"/>
+            </marquee>
+            </div> -->
+            
             <div class="grid grid-3 text-center my-4">
                 <div>
                     <i class="fas fa-server fa-3x"></i>
@@ -73,7 +81,7 @@
                     <h3>1,252,006</h3>
                     <p class="text-secondary">Projects</p>
                 </div>
-            </div>
+            </div> 
         </div>
     </section>
 
@@ -86,7 +94,7 @@
                 <p class="lead my-1">Charity, Reliability, Sustainablity, Innovation, Drive for social impact and respect for everyone.</p>
                 <a href="about.php" class="btn btn-dark">Read More</a>
             </div>
-            <img src="images/cloud.png" alt="">
+                <img src="images/cashflow.jpg" alt="cashflow quadrant"/>
         </div>
     </section>
 
@@ -96,23 +104,17 @@
         <div class="container flex">
             <div class="card">
                 <h4>Trust Wallet</h4>
-                <img src="images/logos/node.png" alt="">
+                <img src="images/logos/trust.png" alt="crypto platform">
             </div>
-            <div class="card">
-                <h4>Binance</h4>
-                <img src="images/logos/php.png" alt="">
-            </div>
+            
             <div class="card">
                 <h4>Meta Mask</h4>
-                <img src="images/logos/python.png" alt="">
+                <img src="images/logos/metamask.png" alt="crypto platform">
             </div>
             <div class="card">
                 <h4>Pancake Swap</h4>
-                <img src="images/logos/scala.png" alt="">
-            </div>
-            
-            
-            
+                <img src="images/logos/pancake.png" alt="crypto platform">
+            </div>    
             
         </div>
     </section>
@@ -133,8 +135,7 @@
             </nav>
             <div class="social">
                 <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
-                <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
-                <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="https://t.me/CFQBSC"><i class="fab fa-telegram fa-2x"></i></a>
             </div>
         </div>
     </footer>

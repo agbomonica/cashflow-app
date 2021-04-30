@@ -15,7 +15,7 @@
     <!-- Nav bar-->
     <div class="navbar">
         <div class="container">
-            <h1 class="logo">CASHFLOW.</h1>
+            <h1 class="logo">CASHFLOW QUADRANT.</h1>
             <div class="toggle"></div>
             <nav class="nav">
                 <ul>
@@ -30,7 +30,7 @@
 
     <!-- Head -->
     <section class="features-head bg-primary py-3">
-        <div class="container grid">
+        <div class="container">
             <div>
                 <h1 class="lg">About Cashflow</h1>
                 <p class="lead">
@@ -42,15 +42,12 @@
 
     <!-- Sub-head -->
     <section class="features-sub-head bg-light py-3">
-        <div class="container grid">
+        <div class="container">
             <div>
                 <h1 class="md">How does cashflow work</h1>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur, 
-                    adipisicing elit. Dolores hic reprehenderit 
-                    eos repellat ipsa delectus, quaerat assumenda 
-                    iste modi explicabo numquam provident facilis 
-                    quos vero veritatis aliquam quia aspernatur sed.
+                Cashflow Quadrant is a community driven, 
+                fair launched Decentralized Financial (DeFi) Token.
                 </p>
             </div>
         </div>
@@ -60,14 +57,14 @@
     <section class="features-main my-2">
         <div class="container grid grid-3">
             <div class="card flex">
-                <i class="fas fa-server fa-3x"></i>
-                <p>Lorem ipsum dolor sit, amet consectetur 
-                    adipisicing elit. Exercitationem repellendus 
-                    iste odit, perferendis nihil, praesentium 
-                    cupiditate, pariatur consequuntur recusandae 
-                    sed voluptatibus dolorem aperiam itaque 
-                    suscipit reprehenderit consectetur amet nam 
-                    unde.
+                <i class="fas fa-info-circle fa-3x"></i>
+                <p>
+                Two simple functions occur 
+                during each trade:
+                3% fee auto add to the liquidity pool 
+                to locked forever when selling,
+                2% fee auto distribute to all holders,
+                the more you hold the more your bag grows.
                 </p>
             </div>
             
@@ -92,8 +89,7 @@
             </nav>
             <div class="social">
                 <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
-                <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
-                <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="https://t.me/CFQBSC"><i class="fab fa-telegram fa-2x"></i></a>
             </div>
         </div>
     </footer>

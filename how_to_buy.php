@@ -15,7 +15,7 @@
     <!-- Navbar-->
     <div class="navbar">
         <div class="container">
-            <h1 class="logo">CASHFLOW.</h1>
+            <h1 class="logo">CASHFLOW QUADRANT.</h1>
             <div class="toggle"></div>
             <nav class="nav">
                 <ul>
@@ -38,7 +38,7 @@
                     to purchase cashflow token by following the approach as suggested below...
                 </p>
             </div>
-            <img src="images/server2.png" alt="">
+            <img src="images/buy_cf.png" alt="Buy" class="my-2">
         </div>
     </section>
 
@@ -48,7 +48,10 @@
             <div class="card flex">
                 <i class="fas fa-info-circle fa-3x"></i>
                 <p class="features-text"> 
-                    If you already have a metamask wallet with BNB or Binance Smart Chain, proceed to buy cashflow on <a href="#" class="">Pancake Swap</a> with your token address.
+                    If you already have a metamask wallet with BNB or Binance Smart Chain, proceed to buy cashflow on 
+                        <a href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0xE6b0eA3a95C0fb4253946385bb962126F582E03E" 
+                            class="">Pancake Swap
+                        </a> with your token address.
                 </p>
             </div>
             
@@ -63,7 +66,9 @@
                     <h4>
                         You can can equally use pancake swap to get token 
                     </h4>
-                    <a href="#" class="btn btn-primary">Pancake Swap</a> 
+                    <a href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0xE6b0eA3a95C0fb4253946385bb962126F582E03E" 
+                        class="btn btn-primary">Pancake Swap
+                    </a> 
 
                     <h4>Navigate back to Trustwallet, select pancake and click on connect.</h4>
 
@@ -98,8 +103,7 @@
             </nav>
             <div class="social">
                 <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
-                <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
-                <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="https://t.me/CFQBSC"><i class="fab fa-telegram fa-2x"></i></a>
             </div>
         </div>
     </footer>
