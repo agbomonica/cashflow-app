@@ -71,7 +71,7 @@
                 </p>
             </div>
             <?php if($msg){?>
-                
+
             <div class="alert alert-success">
                     <p><?php echo $msg ?></p>
 
@@ -130,7 +130,7 @@
                         <img src="images/email.png" class="contact-icon" alt="contact email">
                         <div class="details">
                             <h4>Email</h4>
-                            <a href="mailto:agbomonica.am@gmail.com">cashflowQuadrant@gmail.com</a>
+                            <a href="mailto:agbomonica.am@gmail.com">cashflowQuadrant@gmail.com</a><br>
 
                             <a href="mailto:agbomonica.am@gmail.com">cashflowQuadrant@yahoo.com</a>
 
