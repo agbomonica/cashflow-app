@@ -38,7 +38,7 @@
                     to purchase cashflow token by following the approach as suggested below...
                 </p>
             </div>
-            <img src="images/buy.png" alt="Buy cashflowQuadrant" class="my-2">
+            <img src="images/buy.PNG" alt="Buy cashflowQuadrant" class="my-2">
         </div>
     </section>
 
